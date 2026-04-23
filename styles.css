@@ -249,6 +249,7 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-base);
+  z-index: 999;
 }
 
 .mobile-nav.active {
@@ -1557,10 +1558,29 @@ p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   transition: var(--transition-fast);
+  position: relative;
+  display: inline-block;
+  padding: 2px 0;
 }
 
 .footer-links a:hover {
   color: var(--white);
+  padding-left: 4px;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: width var(--transition-fast);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
 }
 
 .footer-bottom {
@@ -1764,6 +1784,39 @@ p {
 
 
 /* ==========================================================================
+   Mobile Responsive Fixes
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* 防止文字溢出换行问题 */
+  p, .feature-card p, .gallery-info p, .product-content p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  
+  /* 移动端底部链接统一样式 */
+  .footer-links {
+    text-align: left;
+  }
+  
+  .footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* 移动端底部三列在超出时自动换行 */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (min-width: 640px) {
@@ -1928,15 +1981,6 @@ html[lang="zh"] .footer-address {
 /* Mobile tap — prevent ghost highlight */
 a, button, .btn, .feature-card, .stat-item {
   -webkit-tap-highlight-color: transparent;
-}
-
-/* Footer link hover */
-.footer-links a {
-  transition: color var(--transition-fast), padding-left var(--transition-fast);
-}
-.footer-links a:hover {
-  color: var(--white);
-  padding-left: 4px;
 }
 
 /* Gallery Grid — responsive */
