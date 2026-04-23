@@ -65,12 +65,16 @@
           method="POST" 
           data-netlify="true" 
           netlify-honeypot="bot-field"
+          target="netlify-frame"
         >
           <!-- Netlify Forms hidden fields -->
           <input type="hidden" name="form-name" value="vendor-application">
           <p style="display:none;">
             <label>Don't fill this out: <input name="bot-field"></label>
           </p>
+        
+        <!-- Hidden iframe for Netlify Forms POST -->
+        <iframe name="netlify-frame" id="netlify-frame" style="display:none;" onload="handleFormSubmit()"></iframe>
 
           <!-- Section 1: 基础档案 -->
           <div class="form-group animate-on-scroll">
@@ -543,45 +547,42 @@
       });
     }
 
-    // Form Submission
-    document.getElementById('applicationForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => {
-        if (data[key]) {
-          if (!Array.isArray(data[key])) data[key] = [data[key]];
-          data[key].push(value);
-        } else {
-          data[key] = value;
-        }
-      });
-
-      // Also save to localStorage as backup
-      const submissions = JSON.parse(localStorage.getItem('hcc_submissions') || '[]');
-      submissions.push({
-        ...data,
-        submittedAt: new Date().toISOString()
-      });
-      localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
-
-      // Submit to Netlify Forms
-      fetch('/covendor-v3/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
+    // Form Submission via iframe (Netlify Forms compatible)
+    let formSubmitted = false;
+    
+    function handleFormSubmit() {
+      if (formSubmitted) {
+        formSubmitted = false;
+        
+        // Collect form data for localStorage backup
+        const form = document.getElementById('applicationForm');
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+          if (key !== 'bot-field' && data[key] !== undefined) {
+            if (!Array.isArray(data[key])) data[key] = [data[key]];
+            data[key].push(value);
+          } else if (key !== 'bot-field') {
+            data[key] = value;
+          }
+        });
+        
+        // Save to localStorage as backup
+        const submissions = JSON.parse(localStorage.getItem('hcc_submissions') || '[]');
+        submissions.push({
+          ...data,
+          submittedAt: new Date().toISOString()
+        });
+        localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
+        
+        // Show success modal
         document.getElementById('successModal').classList.add('active');
-        this.reset();
-      })
-      .catch((error) => {
-        // Even if Netlify fails, show success (localStorage worked)
-        document.getElementById('successModal').classList.add('active');
-        this.reset();
-        console.log('Netlify submission skipped, local backup saved.');
-      });
+        form.reset();
+      }
+    }
+    
+    document.getElementById('applicationForm').addEventListener('submit', function() {
+      formSubmitted = true;
     });
 
     function closeModal() {
