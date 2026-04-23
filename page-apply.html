@@ -61,6 +61,7 @@
         <form 
           id="applicationForm" 
           name="vendor-application" 
+          action="/covendor-v3/"
           method="POST" 
           data-netlify="true" 
           netlify-honeypot="bot-field"
@@ -566,7 +567,7 @@
       localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
 
       // Submit to Netlify Forms
-      fetch('/', {
+      fetch('/covendor-v3/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
