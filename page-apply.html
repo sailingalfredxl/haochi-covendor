@@ -61,20 +61,15 @@
         <form 
           id="applicationForm" 
           name="vendor-application" 
-          action="/covendor-v3/"
           method="POST" 
           data-netlify="true" 
           netlify-honeypot="bot-field"
-          target="netlify-frame"
         >
           <!-- Netlify Forms hidden fields -->
           <input type="hidden" name="form-name" value="vendor-application">
           <p style="display:none;">
             <label>Don't fill this out: <input name="bot-field"></label>
           </p>
-        
-        <!-- Hidden iframe for Netlify Forms POST -->
-        <iframe name="netlify-frame" id="netlify-frame" style="display:none;" onload="handleFormSubmit()"></iframe>
 
           <!-- Section 1: 基础档案 -->
           <div class="form-group animate-on-scroll">
@@ -547,42 +542,53 @@
       });
     }
 
-    // Form Submission via iframe (Netlify Forms compatible)
-    let formSubmitted = false;
-    
-    function handleFormSubmit() {
-      if (formSubmitted) {
-        formSubmitted = false;
-        
-        // Collect form data for localStorage backup
-        const form = document.getElementById('applicationForm');
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => {
-          if (key !== 'bot-field' && data[key] !== undefined) {
+    // Form Submission - Netlify Forms compatible
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default first
+      
+      const form = this;
+      const formData = new FormData(form);
+      
+      // Save to localStorage as backup
+      const data = {};
+      formData.forEach((value, key) => {
+        if (key !== 'bot-field') {
+          if (data[key] !== undefined) {
             if (!Array.isArray(data[key])) data[key] = [data[key]];
             data[key].push(value);
-          } else if (key !== 'bot-field') {
+          } else {
             data[key] = value;
           }
-        });
-        
-        // Save to localStorage as backup
-        const submissions = JSON.parse(localStorage.getItem('hcc_submissions') || '[]');
-        submissions.push({
-          ...data,
-          submittedAt: new Date().toISOString()
-        });
-        localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
-        
-        // Show success modal
-        document.getElementById('successModal').classList.add('active');
-        form.reset();
-      }
-    }
-    
-    document.getElementById('applicationForm').addEventListener('submit', function() {
-      formSubmitted = true;
+        }
+      });
+      
+      const submissions = JSON.parse(localStorage.getItem('hcc_submissions') || '[]');
+      submissions.push({
+        ...data,
+        submittedAt: new Date().toISOString()
+      });
+      localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
+      
+      // Submit to Netlify using fetch (Ajax approach)
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok || response.status === 200 || response.redirected) {
+          // Success - show modal
+          document.getElementById('successModal').classList.add('active');
+          form.reset();
+        } else {
+          // Fallback to standard form submission
+          form.submit();
+        }
+      })
+      .catch(() => {
+        // Fallback to standard form submission on network error
+        form.submit();
+      });
     });
 
     function closeModal() {
