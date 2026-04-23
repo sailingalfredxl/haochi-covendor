@@ -1491,6 +1491,13 @@ p {
   margin-bottom: var(--space-lg);
 }
 
+/* Modal button - ensure center alignment */
+.modal .btn {
+  display: block;
+  margin: var(--space-lg) auto 0;
+  text-align: center;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
