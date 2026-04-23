@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Haochi!Collective</title>
+  <meta name="description" content="爆款产品库 - 北美市集验证的中式街头美食品类，支持快速开摊。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="logo-header.png" alt="Haochi!Collective" class="logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" data-lang="zh">首页</a><a href="index.html" data-lang="en">Home</a></li>
+          <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+          <li><a href="page-products.html" class="active" data-lang="zh">爆款产品</a><a href="page-products.html" class="active" data-lang="en">Products</a></li>
+          <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button data-lang-btn="zh">中</button>
+          <button data-lang-btn="en" class="active">EN</button>
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" data-lang="zh">首页</a><a href="index.html" data-lang="en">Home</a></li>
+      <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+      <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+      <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 65vh;">
+    <div class="hero-bg" style="background-image: url('images/02.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge" data-lang="zh">爆款产品</span>
+      <span class="hero-badge" data-lang="en">Products</span>
+
+      <h1 data-lang="zh">北美市集活动验证产品库</h1>
+      <h1 data-lang="en">Market-Proven Products for North America</h1>
+
+      <p class="hero-subtitle" data-lang="zh">地道口味，实战验证，直接开摊</p>
+      <p class="hero-subtitle" data-lang="en">Authentic Flavors, Field-Tested, Ready to Serve</p>
+    </div>
+  </section>
+
+  <!-- Product Gallery -->
+  <section class="page-section" style="background: #fafafa;">
+    <div class="container">
+      <div class="gallery-grid">
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p1.png" alt="中式肉馅饼">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">中式肉馅饼</h4>
+            <h4 data-lang="en">Chinese Meat Pie</h4>
+            <p data-lang="zh">底部酥脆，汤汁饱满，排队爆款</p>
+            <p data-lang="en">Crispy bottom, juicy filling — the top crowd-pleaser</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p2.png" alt="广式肠粉">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">广式肠粉</h4>
+            <h4 data-lang="en">Guangdong Cheung Fun</h4>
+            <p data-lang="zh">米浆蒸制，豉油提鲜，入口即化</p>
+            <p data-lang="en">Rice noodle rolls, silky smooth — drizzled with soy sauce</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p4.png" alt="中式春卷">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">中式春卷</h4>
+            <h4 data-lang="en">Chinese Spring Rolls</h4>
+            <p data-lang="zh">酥脆外皮，馅料丰富，热气腾腾</p>
+            <p data-lang="en">Crispy wrapper, rich filling — served piping hot</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p5.png" alt="中式大馄炖">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">中式大馄炖</h4>
+            <h4 data-lang="en">Chinese Wonton Soup</h4>
+            <p data-lang="zh">薄皮大馅，汤鲜肉嫩，一口满足</p>
+            <p data-lang="en">Thick wrapper, generous filling — a warm bowl of comfort</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p7.png" alt="中式烧烤">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">中式烧烤</h4>
+            <h4 data-lang="en">Chinese BBQ Skewers</h4>
+            <p data-lang="zh">炭火炙烤，香料入味，烟火气足</p>
+            <p data-lang="en">Charcoal-grilled, spice-marinated — authentic smoky flavor</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p10.png" alt="江南小笼包">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">江南小笼包</h4>
+            <h4 data-lang="en">Jiangnan Xiao Long Bao</h4>
+            <p data-lang="zh">皮薄汤多，江南风味，精巧可口</p>
+            <p data-lang="en">Delicate skin, soup-rich — refined Jiangnan taste</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p11.png" alt="台式盐酥鸡">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">台式盐酥鸡</h4>
+            <h4 data-lang="en">Taiwanese Salt & Pepper Chicken</h4>
+            <p data-lang="zh">外酥里嫩，椒盐提香，台湾夜市经典</p>
+            <p data-lang="en">Crispy exterior, tender inside — Taiwan night market classic</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p16.png" alt="西安肉夹馍">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">西安肉夹馍</h4>
+            <h4 data-lang="en">Xi'an Rou Jia Mo</h4>
+            <p data-lang="zh">腊汁慢炖，酥馍夹肉，千年古城味</p>
+            <p data-lang="en">Slow-braised spiced pork — stuffed in a crispy flatbread</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p17.png" alt="手打柠檬茶">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">手打柠檬茶</h4>
+            <h4 data-lang="en">Hand-Crushed Lemon Tea</h4>
+            <p data-lang="zh">柠檬现打，清新解腻，摊位必备</p>
+            <p data-lang="en">Fresh-crushed lemon, refreshing kick — essential for any stall</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p18.png" alt="拇指生煎包">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">拇指生煎包</h4>
+            <h4 data-lang="en">Mini Pan-Fried Buns</h4>
+            <p data-lang="zh">小小一口，酥脆多汁，迷你开胃</p>
+            <p data-lang="en">Bite-sized, crispy & juicy — the perfect mini snack</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p19.png" alt="家乡豆腐脑">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">家乡豆腐脑</h4>
+            <h4 data-lang="en">Silken Tofu Pudding</h4>
+            <p data-lang="zh">嫩滑豆花，咸鲜浇头，暖心暖胃</p>
+            <p data-lang="en">Silken tofu, savory topping — warm comfort in a bowl</p>
+          </div>
+        </div>
+
+        <div class="gallery-card animate-on-scroll">
+          <div class="gallery-img">
+            <img src="images/p20.png" alt="山东菜煎饼">
+          </div>
+          <div class="gallery-info">
+            <h4 data-lang="zh">山东菜煎饼</h4>
+            <h4 data-lang="en">Shandong Vegetable Pancake</h4>
+            <p data-lang="zh">杂粮薄饼，时蔬丰富，健康美味</p>
+            <p data-lang="en">Millet pancake, fresh veggies — healthy & delicious</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="page-section" style="background: var(--dark);">
+    <div class="container" style="text-align: center;">
+      <h2 style="color: white; margin-bottom: var(--space-lg);" class="animate-on-scroll" data-lang="zh">想了解更多产品？</h2>
+      <h2 style="color: white; margin-bottom: var(--space-lg);" class="animate-on-scroll" data-lang="en">Want to Learn More About Our Products?</h2>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-xl);" class="animate-on-scroll" data-lang="zh">与我们一起共创更多地道街头美食</p>
+      <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-xl);" class="animate-on-scroll" data-lang="en">Let's create more authentic street food together</p>
+      <a href="page-apply.html" class="btn btn-primary animate-on-scroll" data-lang="zh">加入美食达人社区 →</a>
+      <a href="page-apply.html" class="btn btn-primary animate-on-scroll" data-lang="en">Join Our Food Community →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-footer.png" alt="Haochi!Collective" class="footer-logo">
+          <p data-lang="zh">家传配方，美味变现</p>
+          <p data-lang="en">From Family Recipes to Scalable Brands</p>
+          <p class="footer-company">HAO CHI COLLECTIVE INC.</p>
+          <p class="footer-address">14-96 Main Street, Flushing NY 11355</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-lang="zh">快速链接</h4>
+          <h4 data-lang="en">Quick Links</h4>
+          <ul>
+            <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+            <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+            <li><a href="page-products.html" data-lang="zh">战绩展示</a><a href="page-products.html" data-lang="en">Events</a></li>
+            <li><a href="page-apply.html" data-lang="zh">加入搞钱</a><a href="page-apply.html" data-lang="en">Become a Vendor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-lang="zh">法律信息</h4>
+          <h4 data-lang="en">Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Haochi!Collective. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a>
+          <a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const langToggle = document.querySelectorAll('[data-lang-btn]');
+    const html = document.documentElement;
+
+    langToggle.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.langBtn;
+        html.lang = lang;
+        langToggle.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        localStorage.setItem('hcc_lang', lang);
+      });
+    });
+
+    const savedLang = localStorage.getItem('hcc_lang');
+    if (savedLang) {
+      html.lang = savedLang;
+      langToggle.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.langBtn === savedLang);
+      });
+    }
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

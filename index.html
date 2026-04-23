@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haochi!Collective | Turning Family Recipes into Scalable Brands</title>
+  <meta name="description" content="Bringing Authentic Chinese Street Food to the World. Join Haochi!Collective and turn your family recipes into profitable food businesses.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="logo-header.png" alt="Haochi!Collective" class="logo">
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" data-lang="zh">首页</a><a href="index.html" class="active" data-lang="en">Home</a></li>
+          <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+          <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+          <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button data-lang-btn="zh">中</button>
+          <button data-lang-btn="en" class="active">EN</button>
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" data-lang="zh">首页</a><a href="index.html" data-lang="en">Home</a></li>
+      <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+      <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+      <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('images/export-hero.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-color-wash"></div>
+    
+    <div class="hero-content">
+      <h1 data-lang="zh">家传配方，美味变现</h1>
+      <h1 data-lang="en">From Family Recipes to Scalable Brands</h1>
+      
+      <p class="hero-subtitle" data-lang="zh">携手华人美食匠人，让北美舌尖记住中国味道</p>
+      <p class="hero-subtitle" data-lang="en">Partnering with Chinese food artisans to bring authentic flavors to North America</p>
+      
+      <div class="hero-buttons">
+        <a href="page-apply.html" class="btn btn-hero-equal btn-hero-solid" data-lang="zh">成为合作摊主</a>
+        <a href="page-apply.html" class="btn btn-hero-equal btn-hero-solid" data-lang="en">Become a Vendor</a>
+        <a href="page-story.html" class="btn btn-hero-equal btn-hero-glass" data-lang="zh">了解更多</a>
+        <a href="page-story.html" class="btn btn-hero-equal btn-hero-glass" data-lang="en">Learn More</a>
+      </div>
+    </div>
+
+    <!-- 滚动提示：直接挂在 hero 下，绝对定位在 hero 底部 -->
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      <span data-lang="zh">向下探索</span>
+      <span data-lang="en">Scroll</span>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll">
+          <span class="stat-number" data-lang="zh">12+</span>
+          <span class="stat-number" data-lang="en">12+</span>
+          <span class="stat-label" data-lang="zh">已孵化市集爆款产品</span>
+          <span class="stat-label" data-lang="en">Market-Proven Products</span>
+          <span class="stat-sub" data-lang="zh">更多产品正在研发中</span>
+          <span class="stat-sub" data-lang="en">More in development</span>
+        </div>
+        <div class="stat-item animate-on-scroll delay-1">
+          <span class="stat-number" data-lang="zh">近百场</span>
+          <span class="stat-number" data-lang="en">100+</span>
+          <span class="stat-label" data-lang="zh">在美成功活动</span>
+          <span class="stat-label" data-lang="en">Events Completed</span>
+          <span class="stat-sub" data-lang="zh">已与多位全美优秀活动策展人达成合作</span>
+          <span class="stat-sub" data-lang="en">With top event curators nationwide</span>
+        </div>
+        <div class="stat-item animate-on-scroll delay-2">
+          <span class="stat-number" data-lang="zh">7位</span>
+          <span class="stat-number" data-lang="en">7</span>
+          <span class="stat-label" data-lang="zh">市集美食摊主</span>
+          <span class="stat-label" data-lang="en">Market Food Vendors</span>
+          <span class="stat-sub" data-lang="zh">欢迎更多在美华人加入合作摊主社群</span>
+          <span class="stat-sub" data-lang="en">Open to Chinese food entrepreneurs in the US</span>
+        </div>
+        <div class="stat-item animate-on-scroll delay-3">
+          <span class="stat-number" data-lang="zh">10+</span>
+          <span class="stat-number" data-lang="en">10+</span>
+          <span class="stat-label" data-lang="zh">主要城市覆盖</span>
+          <span class="stat-label" data-lang="en">Cities Covered</span>
+          <span class="stat-sub" data-lang="zh">支持合作主理人在地市集出摊</span>
+          <span class="stat-sub" data-lang="en">Supporting local market operations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Overview -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2 data-lang="zh">我们做什么</h2>
+        <h2 data-lang="en">What We Do</h2>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll">
+          <div class="feature-icon">
+            <!-- Chef hat / artisan icon -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="26" width="24" height="4" rx="2" fill="currentColor" opacity="0.15"/>
+              <path d="M14 26v-3a8 8 0 1 1 16 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="13" y="30" width="18" height="5" rx="2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="22" cy="15" r="1.5" fill="currentColor"/>
+              <path d="M10 26h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-lang="zh">美食摊主孵化</h3>
+          <h3 data-lang="en">Artisan Incubation</h3>
+          <p data-lang="zh">发掘有潜力的在美华人美食主理人，将最热门的市集中式美食爆品转化为可持续经营的小微生意。</p>
+          <p data-lang="en">Identify talented Chinese food entrepreneurs in the US. Help them turn popular market hits into sustainable small businesses.</p>
+        </div>
+        
+        <div class="feature-card animate-on-scroll delay-1">
+          <div class="feature-icon">
+            <!-- Product grid icon -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="12" height="12" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="24" y="8" width="12" height="12" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="8" y="24" width="12" height="12" rx="2.5" stroke="currentColor" stroke-width="2"/>
+              <rect x="24" y="24" width="12" height="12" rx="2.5" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="2"/>
+              <path d="M28 30h4M30 28v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-lang="zh">爆款产品矩阵</h3>
+          <h3 data-lang="en">Product Ecosystem</h3>
+          <p data-lang="zh">持续打造最热门的市集中式美食产品体系，整合美国优质主辅食材供应链与定制化热门包材，通过真实市集活动完成市场验证。</p>
+          <p data-lang="en">Build the hottest Chinese market food lineup — backed by US ingredient sourcing, custom packaging, and real market validation.</p>
+        </div>
+        
+        <div class="feature-card animate-on-scroll delay-2">
+          <div class="feature-icon">
+            <!-- Event / flag-calendar icon -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="13" width="30" height="23" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 19h30" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 8v6M29 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="13" y="24" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M25 27h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M25 24h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-lang="zh">全美活动进驻</h3>
+          <h3 data-lang="en">Nationwide Event Access</h3>
+          <p data-lang="zh">对接北美各类优质美食节、周末市集、主题活动、音乐节、运动赛事和会展活动，支持合作摊主全年稳定出摊。</p>
+          <p data-lang="en">Connect vendors to food festivals, weekend markets, music festivals, and expos across North America — year-round, stable opportunities.</p>
+        </div>
+        
+        <div class="feature-card animate-on-scroll delay-3">
+          <div class="feature-icon">
+            <!-- Growth / trend-up icon -->
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 33l9-10 7 5 13-16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29 12h6v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 37h30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 data-lang="zh">营销赋能增长</h3>
+          <h3 data-lang="en">Growth Marketing</h3>
+          <p data-lang="zh">全流程品牌建设、社交媒体营销、线上线下整合推广、数据分析支持，助力小微生意持续增长。</p>
+          <p data-lang="en">Full-cycle brand building, social media marketing, integrated online-offline promotions, and data analytics — powering sustainable growth for your small business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-footer.png" alt="Haochi!Collective" class="footer-logo">
+          <p data-lang="zh">家传配方，美味变现</p>
+          <p data-lang="en">From Family Recipes to Scalable Brands</p>
+          <p class="footer-company">HAO CHI COLLECTIVE INC.</p>
+          <p class="footer-address">14-96 Main Street, Flushing NY 11355</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4 data-lang="zh">快速链接</h4>
+          <h4 data-lang="en">Quick Links</h4>
+          <ul>
+            <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+            <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+            <li><a href="page-products.html" data-lang="zh">战绩展示</a><a href="page-products.html" data-lang="en">Events</a></li>
+            <li><a href="page-apply.html" data-lang="zh">加入搞钱</a><a href="page-apply.html" data-lang="en">Become a Vendor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-lang="zh">法律信息</h4>
+          <h4 data-lang="en">Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Haochi!Collective. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a>
+          <a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const langToggle = document.querySelectorAll('[data-lang-btn]');
+    const html = document.documentElement;
+    
+    langToggle.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.langBtn;
+        html.lang = lang;
+        langToggle.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        localStorage.setItem('hcc_lang', lang);
+      });
+    });
+    
+    const savedLang = localStorage.getItem('hcc_lang');
+    if (savedLang) {
+      html.lang = savedLang;
+      langToggle.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.langBtn === savedLang);
+      });
+    }
+    
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

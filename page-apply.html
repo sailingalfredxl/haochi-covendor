@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now | Haochi!Collective</title>
+  <meta name="description" content="Co-Vendor Quiz - Are You Born to Hustle? Apply to become a Haochi!Collective vendor and turn your food dream into reality.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="logo-white.png" alt="Haochi!Collective" class="logo">
+      </a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html" data-lang="zh">首页</a><a href="index.html" data-lang="en">Home</a></li>
+          <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+          <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+          <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button data-lang-btn="zh">中</button>
+          <button data-lang-btn="en" class="active">EN</button>
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" data-lang="zh">首页</a><a href="index.html" data-lang="en">Home</a></li>
+      <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+      <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+      <li><a href="page-solution.html" data-lang="zh">成为摊主</a><a href="page-solution.html" data-lang="en">Become a Vendor</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-intro animate-on-scroll">
+          <h2 data-lang="zh">合作摊主问卷</h2>
+          <h2 data-lang="en">Co-Vendor Quiz</h2>
+          <h3 class="quiz-subtitle" data-lang="zh">测一测你的摆摊天赋</h3>
+          <h3 class="quiz-subtitle" data-lang="en">Are You Born to Hustle?</h3>
+          <p data-lang="zh">随便填，没压力！ 填完我们48小时内联系你，看看咱俩合不合适！💯</p>
+          <p data-lang="en">No pressure, just vibes! Fill this out, and we'll hit you up within 48 hours. Let's see if we're a match! 💯</p>
+        </div>
+
+        <form id="applicationForm">
+
+          <!-- Section 1: 基础档案 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">👤 基础档案 (Your Info)</h4>
+              <h4 data-lang="en">👤 Your Info</h4>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label data-lang="zh">姓名</label>
+                <label data-lang="en">Name</label>
+                <input type="text" name="name" required placeholder="">
+              </div>
+              <div class="form-field">
+                <label data-lang="zh">邮箱</label>
+                <label data-lang="en">Email</label>
+                <input type="email" name="email" required placeholder="">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label data-lang="zh">电话</label>
+                <label data-lang="en">Phone</label>
+                <input type="tel" name="phone" placeholder="">
+              </div>
+              <div class="form-field">
+                <label data-lang="zh">微信</label>
+                <label data-lang="en">WeChat ID</label>
+                <input type="text" name="wechat" placeholder="">
+              </div>
+            </div>
+            <div class="form-field">
+              <label data-lang="zh">居住地点</label>
+              <label data-lang="en">State</label>
+              <select name="state">
+                <option value="">-</option>
+                <option value="AL">AL Alabama / 阿拉巴马州</option>
+                <option value="AK">AK Alaska / 阿拉斯加州</option>
+                <option value="AZ">AZ Arizona / 亚利桑那州</option>
+                <option value="AR">AR Arkansas / 阿肯色州</option>
+                <option value="CA">CA California / 加利福尼亚州</option>
+                <option value="CO">CO Colorado / 科罗拉多州</option>
+                <option value="CT">CT Connecticut / 康涅狄格州</option>
+                <option value="DE">DE Delaware / 特拉华州</option>
+                <option value="FL">FL Florida / 佛罗里达州</option>
+                <option value="GA">GA Georgia / 佐治亚州</option>
+                <option value="HI">HI Hawaii / 夏威夷州</option>
+                <option value="ID">ID Idaho / 爱达荷州</option>
+                <option value="IL">IL Illinois / 伊利诺伊州</option>
+                <option value="IN">IN Indiana / 印第安纳州</option>
+                <option value="IA">IA Iowa / 爱荷华州</option>
+                <option value="KS">KS Kansas / 堪萨斯州</option>
+                <option value="KY">KY Kentucky / 肯塔基州</option>
+                <option value="LA">LA Louisiana / 路易斯安那州</option>
+                <option value="ME">ME Maine / 缅因州</option>
+                <option value="MD">MD Maryland / 马里兰州</option>
+                <option value="MA">MA Massachusetts / 马萨诸塞州</option>
+                <option value="MI">MI Michigan / 密歇根州</option>
+                <option value="MN">MN Minnesota / 明尼苏达州</option>
+                <option value="MS">MS Mississippi / 密西西比州</option>
+                <option value="MO">MO Missouri / 密苏里州</option>
+                <option value="MT">MT Montana / 蒙大拿州</option>
+                <option value="NE">NE Nebraska / 内布拉斯加州</option>
+                <option value="NV">NV Nevada / 内华达州</option>
+                <option value="NH">NH New Hampshire / 新罕布什尔州</option>
+                <option value="NJ">NJ New Jersey / 新泽西州</option>
+                <option value="NM">NM New Mexico / 新墨西哥州</option>
+                <option value="NY">NY New York / 纽约州</option>
+                <option value="NC">NC North Carolina / 北卡罗来纳州</option>
+                <option value="ND">ND North Dakota / 北达科他州</option>
+                <option value="OH">OH Ohio / 俄亥俄州</option>
+                <option value="OK">OK Oklahoma / 俄克拉荷马州</option>
+                <option value="OR">OR Oregon / 俄勒冈州</option>
+                <option value="PA">PA Pennsylvania / 宾夕法尼亚州</option>
+                <option value="RI">RI Rhode Island / 罗得岛州</option>
+                <option value="SC">SC South Carolina / 南卡罗来纳州</option>
+                <option value="SD">SD South Dakota / 南达科他州</option>
+                <option value="TN">TN Tennessee / 田纳西州</option>
+                <option value="TX">TX Texas / 得克萨斯州</option>
+                <option value="UT">UT Utah / 犹他州</option>
+                <option value="VT">VT Vermont / 佛蒙特州</option>
+                <option value="VA">VA Virginia / 弗吉尼亚州</option>
+                <option value="WA">WA Washington / 华盛顿州</option>
+                <option value="WV">WV West Virginia / 西弗吉尼亚州</option>
+                <option value="WI">WI Wisconsin / 威斯康星州</option>
+                <option value="WY">WY Wyoming / 怀俄明州</option>
+                <option value="DC">DC District of Columbia / 华盛顿特区</option>
+              </select>
+            </div>
+
+            <!-- 判断性问题 -->
+            <div class="form-field yesno-field">
+              <label data-lang="zh">您是否具有美国合法工作许可？</label>
+              <label data-lang="en">Do you have legal work authorization in the U.S.?</label>
+              <div class="yesno-options">
+                <label class="yesno-label">
+                  <input type="radio" name="work_permit" value="yes">
+                  <span data-lang="zh">是</span>
+                  <span data-lang="en">Yes</span>
+                </label>
+                <label class="yesno-label">
+                  <input type="radio" name="work_permit" value="no">
+                  <span data-lang="zh">否</span>
+                  <span data-lang="en">No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field yesno-field">
+              <label data-lang="zh">您是否自有可用于出摊运输的车辆？</label>
+              <label data-lang="en">Do you have a vehicle for transport to events?</label>
+              <div class="yesno-options">
+                <label class="yesno-label">
+                  <input type="radio" name="own_vehicle" value="yes">
+                  <span data-lang="zh">是</span>
+                  <span data-lang="en">Yes</span>
+                </label>
+                <label class="yesno-label">
+                  <input type="radio" name="own_vehicle" value="no">
+                  <span data-lang="zh">否</span>
+                  <span data-lang="en">No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field checkbox-group-field">
+              <label data-lang="zh">您是否有以下移动餐饮服务资质？（可多选）</label>
+              <label data-lang="en">Do you have any of the following certifications? (select all that apply)</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="food_manager">
+                  <span data-lang="zh">食物保护经理证书</span>
+                  <span data-lang="en">Food Protection Manager Cert</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="food_handler">
+                  <span data-lang="zh">食品操作员证书</span>
+                  <span data-lang="en">Food Handler Certificate</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="allergen">
+                  <span data-lang="zh">过敏源培训证书</span>
+                  <span data-lang="en">Allergen Training Cert</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="alcohol">
+                  <span data-lang="zh">含酒精食品服务证书</span>
+                  <span data-lang="en">Alcohol Service Cert</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="first_aid">
+                  <span data-lang="zh">急救员证书</span>
+                  <span data-lang="en">First Aid Certificate</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="choking">
+                  <span data-lang="zh">防窒息证书</span>
+                  <span data-lang="en">Choking Prevention Cert</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: 硬件配置 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">⚙️ 硬件配置 (Your Setup)</h4>
+              <h4 data-lang="en">⚙️ Your Setup</h4>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label data-lang="zh">自有设备</label>
+                <label data-lang="en">Equipment</label>
+                <select name="equipment">
+                  <option value="">-</option>
+                  <option value="none" data-lang="zh">无</option>
+                  <option value="none" data-lang="en">None</option>
+                  <option value="basic" data-lang="zh">基础设备</option>
+                  <option value="basic" data-lang="en">Basic Setup</option>
+                  <option value="full" data-lang="zh">全套设备</option>
+                  <option value="full" data-lang="en">Full Setup</option>
+                  <option value="truck" data-lang="zh">餐车</option>
+                  <option value="truck" data-lang="en">Food Truck</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label data-lang="zh">食品许可证</label>
+                <label data-lang="en">Food Permit</label>
+                <select name="permit">
+                  <option value="">-</option>
+                  <option value="none" data-lang="zh">暂无</option>
+                  <option value="none" data-lang="en">None yet</option>
+                  <option value="mobile" data-lang="zh">移动餐车许可</option>
+                  <option value="mobile" data-lang="en">Mobile Food Permit</option>
+                  <option value="commercial" data-lang="zh">商业厨房许可</option>
+                  <option value="commercial" data-lang="en">Commercial Kitchen</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: 技能点 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">👨‍🍳 技能点 (Your Skills)</h4>
+              <h4 data-lang="en">👨‍🍳 Your Skills</h4>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label data-lang="zh">烹饪经验</label>
+                <label data-lang="en">Cooking Experience</label>
+                <select name="experience">
+                  <option value="">-</option>
+                  <option value="home" data-lang="zh">家常烹饪</option>
+                  <option value="home" data-lang="en">Home Cooking</option>
+                  <option value="restaurant" data-lang="zh">餐厅厨师</option>
+                  <option value="restaurant" data-lang="en">Restaurant Chef</option>
+                  <option value="professional" data-lang="zh">专业厨师</option>
+                  <option value="professional" data-lang="en">Professional Chef</option>
+                  <option value="catering" data-lang="zh">外烩/活动餐</option>
+                  <option value="catering" data-lang="en">Catering/Events</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label data-lang="zh">招牌菜/代表作</label>
+                <label data-lang="en">Signature Dish</label>
+                <input type="text" name="signature" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: 你的绝活 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">🌶️ 你的绝活 (Your Secret Sauce)</h4>
+              <h4 data-lang="en">🌶️ Your Secret Sauce</h4>
+            </div>
+            <div class="form-field">
+              <label data-lang="zh">美食特色/卖点</label>
+              <label data-lang="en">What makes your food unique?</label>
+              <textarea name="specialty" placeholder=""></textarea>
+            </div>
+          </div>
+
+          <!-- Section 5: 搞钱意向 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">💰 搞钱意向 (Your Hustle Goals)</h4>
+              <h4 data-lang="en">💰 Your Hustle Goals</h4>
+            </div>
+            <div class="form-field">
+              <label data-lang="zh">为什么想要成为合作摊主？</label>
+              <label data-lang="en">Why do you want to become a co-vendor?</label>
+              <textarea name="reason" class="reason-textarea" data-placeholder="展示非凡厨艺 / 丰富闲暇生活 / 提升副业收入 / 改善家庭收入" placeholder=""></textarea>
+            </div>
+          </div>
+
+          <!-- Section 6: 情报收集 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">🕵️ 情报收集 (Event Intel)</h4>
+              <h4 data-lang="en">🕵️ Event Intel</h4>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--space-lg);" data-lang="zh">知道什么好活动？爆料有赏！活动情报 = 加分项！</p>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--space-lg);" data-lang="en">Know any good festivals? Spill the tea! Info on events = bonus points!</p>
+
+            <div id="eventIntelContainer">
+              <div class="event-intel-item">
+                <div class="form-field">
+                  <label data-lang="zh">活动名称</label>
+                  <label data-lang="en">Event Name</label>
+                  <input type="text" name="event_name[]" placeholder="">
+                </div>
+                <div class="form-field">
+                  <label data-lang="zh">活动地点</label>
+                  <label data-lang="en">Location</label>
+                  <input type="text" name="event_location[]" placeholder="">
+                </div>
+                <div class="form-field">
+                  <label>&nbsp;</label>
+                  <button type="button" class="remove-event-btn" onclick="removeEventIntel(this)" style="display: none;">✕</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="add-event-btn" onclick="addEventIntel()">
+              <span data-lang="zh">+ 还有料？继续爆</span>
+              <span data-lang="en">+ Add More Events</span>
+            </button>
+          </div>
+
+          <!-- Section 7: 其他 -->
+          <div class="form-group animate-on-scroll">
+            <div class="form-group-title">
+              <h4 data-lang="zh">💬 其他 (Anything Else?)</h4>
+              <h4 data-lang="en">💬 Anything Else?</h4>
+            </div>
+            <div class="form-field">
+              <label data-lang="zh">还有什么想告诉我们/想了解的？</label>
+              <label data-lang="en">Questions or comments?</label>
+              <textarea name="comments" placeholder=""></textarea>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">
+              <span data-lang="zh">🚀 提交，坐等联系</span>
+              <span data-lang="en">🚀 Submit & Let's Talk</span>
+            </button>
+            <p style="margin-top: var(--space-md); color: var(--text-secondary); font-size: 0.9rem;" data-lang="zh">48小时内必有回响</p>
+            <p style="margin-top: var(--space-md); color: var(--text-secondary); font-size: 0.9rem;" data-lang="en">We'll hit you up within 48 hours</p>
+          </div>
+        </form>
+
+        <!-- Form Footer -->
+        <div class="form-footer">
+          <p data-lang="zh">有疑问？发邮件撩我们：<a href="mailto:vendor@haochicollective.com">vendor@haochicollective.com</a></p>
+          <p data-lang="en">Questions? Slide into our DMs at <a href="mailto:vendor@haochicollective.com">vendor@haochicollective.com</a></p>
+          <div class="social-links">
+            <a href="#" class="social-link social-link-lg" aria-label="Instagram">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link social-link-lg" aria-label="WeChat">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5.5 3c0 4.4-3.6 7.5-8 7.5S4 20.4 4 16c0-1.5.5-2.9 1.3-4L8 9l2 3 1.5-2L9 8c.8-.4 1.7-.7 2.6-.7 4 0 7.4 3.4 7.4 7.5z"/></svg>
+            </a>
+            <a href="#" class="social-link social-link-lg" aria-label="TikTok">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.99a8.16 8.16 0 0 0 4.77 1.52V6.75a4.85 4.85 0 0 1-1-.06z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">✓</div>
+      <h3 data-lang="zh">提交成功！</h3>
+      <h3 data-lang="en">Submitted!</h3>
+      <p data-lang="zh">我们将在48小时内联系你，看看咱俩合不合适！</p>
+      <p data-lang="en">We'll hit you up within 48 hours. Let's see if we're a match!</p>
+      <button class="btn btn-primary" onclick="closeModal()" data-lang="zh">好的！</button>
+      <button class="btn btn-primary" onclick="closeModal()" data-lang="en">Got it!</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo-footer.png" alt="Haochi!Collective" class="footer-logo">
+          <p data-lang="zh">家传配方，美味变现</p>
+          <p data-lang="en">From Family Recipes to Scalable Brands</p>
+          <p class="footer-company">HAO CHI COLLECTIVE INC.</p>
+          <p class="footer-address">14-96 Main Street, Flushing NY 11355</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-lang="zh">快速链接</h4>
+          <h4 data-lang="en">Quick Links</h4>
+          <ul>
+            <li><a href="page-story.html" data-lang="zh">关于我们</a><a href="page-story.html" data-lang="en">About Us</a></li>
+            <li><a href="page-products.html" data-lang="zh">爆款产品</a><a href="page-products.html" data-lang="en">Products</a></li>
+            <li><a href="page-products.html" data-lang="zh">战绩展示</a><a href="page-products.html" data-lang="en">Events</a></li>
+            <li><a href="page-apply.html" data-lang="zh">加入搞钱</a><a href="page-apply.html" data-lang="en">Become a Vendor</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-lang="zh">法律信息</h4>
+          <h4 data-lang="en">Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Haochi!Collective. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html" data-lang="zh">隐私政策</a><a href="privacy-policy.html" data-lang="en">Privacy Policy</a>
+          <a href="terms-of-service.html" data-lang="zh">服务条款</a><a href="terms-of-service.html" data-lang="en">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language Toggle
+    const langToggle = document.querySelectorAll('[data-lang-btn]');
+    const html = document.documentElement;
+
+    langToggle.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.langBtn;
+        html.lang = lang;
+        langToggle.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        localStorage.setItem('hcc_lang', lang);
+        setReasonPlaceholder(lang);
+      });
+    });
+
+    const savedLang = localStorage.getItem('hcc_lang');
+    if (savedLang) {
+      html.lang = savedLang;
+      langToggle.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.langBtn === savedLang);
+      });
+    }
+
+    // Mobile Menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+
+    // Reason textarea placeholder behavior
+    const reasonTextarea = document.querySelector('.reason-textarea');
+    const PLACEHOLDER_ZH = '展示非凡厨艺 / 丰富闲暇生活 / 提升副业收入 / 改善家庭收入';
+    const PLACEHOLDER_EN = 'Show off your cooking skills / Enrich your free time / Boost side income / Improve family income';
+    function setReasonPlaceholder(lang) {
+      if (reasonTextarea) {
+        reasonTextarea.placeholder = lang === 'zh' ? PLACEHOLDER_ZH : PLACEHOLDER_EN;
+      }
+    }
+    setReasonPlaceholder(html.lang);
+
+    // Event Intel Dynamic Fields
+    function addEventIntel() {
+      const container = document.getElementById('eventIntelContainer');
+      const newItem = document.createElement('div');
+      newItem.className = 'event-intel-item';
+      newItem.innerHTML = `
+        <div class="form-field">
+          <label data-lang="zh">活动名称</label>
+          <label data-lang="en">Event Name</label>
+          <input type="text" name="event_name[]" placeholder="">
+        </div>
+        <div class="form-field">
+          <label data-lang="zh">活动地点</label>
+          <label data-lang="en">Location</label>
+          <input type="text" name="event_location[]" placeholder="">
+        </div>
+        <div class="form-field">
+          <label>&nbsp;</label>
+          <button type="button" class="remove-event-btn" onclick="removeEventIntel(this)">✕</button>
+        </div>
+      `;
+      container.appendChild(newItem);
+      updateRemoveButtons();
+    }
+
+    function removeEventIntel(btn) {
+      btn.closest('.event-intel-item').remove();
+      updateRemoveButtons();
+    }
+
+    function updateRemoveButtons() {
+      const items = document.querySelectorAll('.event-intel-item');
+      document.querySelectorAll('.remove-event-btn').forEach(btn => {
+        btn.style.display = items.length > 1 ? 'block' : 'none';
+      });
+    }
+
+    // Form Submission
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (data[key]) {
+          if (!Array.isArray(data[key])) data[key] = [data[key]];
+          data[key].push(value);
+        } else {
+          data[key] = value;
+        }
+      });
+
+      // Save to localStorage
+      const submissions = JSON.parse(localStorage.getItem('hcc_submissions') || '[]');
+      submissions.push({
+        ...data,
+        submittedAt: new Date().toISOString()
+      });
+      localStorage.setItem('hcc_submissions', JSON.stringify(submissions));
+
+      document.getElementById('successModal').classList.add('active');
+      this.reset();
+    });
+
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('active');
+    }
+
+    document.getElementById('successModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // Scroll Animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    updateRemoveButtons();
+  </script>
+</body>
+</html>

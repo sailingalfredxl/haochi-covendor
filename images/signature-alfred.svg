@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
+  <style>
+    .sig-text { font-family: 'Caveat', 'Brush Script MT', cursive; font-size: 52px; font-weight: 400; fill: #1a1a1a; }
+    .sig-line { stroke: #ccc; stroke-width: 0.8; stroke-linecap: round; }
+  </style>
+  <!-- Signature baseline -->
+  <line x1="0" y1="82" x2="235" y2="82" class="sig-line"/>
+  <!-- Right-aligned signature -->
+  <text x="235" y="70" text-anchor="end" class="sig-text">Alfred Xu</text>
+</svg>
