@@ -341,8 +341,10 @@ p {
   }
 
   .tab-icon {
-    font-size: 1.3rem;
-    line-height: 1;
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    flex-shrink: 0;
   }
 
   .tab-label {
