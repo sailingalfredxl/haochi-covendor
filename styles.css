@@ -237,6 +237,17 @@ p {
   transition: var(--transition-fast);
 }
 
+/* Hamburger → X animation */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .mobile-nav {
   position: fixed;
   top: 70px;
@@ -275,6 +286,85 @@ p {
 
 .mobile-nav-links a:hover {
   background: var(--gray-100);
+}
+
+/* ==========================================================================
+   Mobile Bottom Tab Bar (visible on small screens)
+   ========================================================================== */
+.mobile-tab-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* 隐藏汉堡菜单按钮 */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* 隐藏下拉式 mobile-nav（由 tab bar 替代） */
+  .mobile-nav {
+    display: none !important;
+  }
+
+  /* 底部 Tab Bar */
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--gray-200);
+    padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    flex: 1;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-light);
+    transition: color var(--transition-fast);
+    padding: 4px 0;
+  }
+
+  .tab-item.active,
+  .tab-item:hover {
+    color: var(--primary);
+  }
+
+  .tab-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .tab-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  /* 底部 Tab Bar 占位：让正文内容不被遮挡 */
+  body {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+
+  /* 顶部导航栏移动端 —— 只显示 Logo + 语言切换 */
+  .nav {
+    gap: var(--space-sm);
+  }
+
+  .nav .nav-links {
+    display: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -1775,32 +1865,100 @@ p {
    Mobile Responsive Fixes
    ========================================================================== */
 @media (max-width: 767px) {
-  /* 防止文字溢出换行问题 */
-  p, .feature-card p, .gallery-info p, .product-content p {
+
+  /* ---- 全局溢出保护 ---- */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* ---- 文字溢出修复（全局） ---- */
+  p, h1, h2, h3, h4, h5, h6,
+  li, label, span, a, button,
+  .feature-card p, .gallery-info p, .product-content p,
+  .stat-number, .stat-label, .hero-subtitle {
     overflow-wrap: break-word;
     word-break: break-word;
-    hyphens: auto;
   }
-  
-  /* 移动端底部链接统一样式 */
+
+  /* ---- 标题缩放（防止超宽） ---- */
+  h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  h3 { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+  h4 { font-size: 1.05rem; }
+
+  /* ---- 容器内边距收窄 ---- */
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* ---- 按钮不超出屏幕 ---- */
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* ---- Hero 区域 ---- */
+  .hero-content {
+    padding: 0 var(--space-md);
+  }
+
+  /* ---- 统计数字行不折断 ---- */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  /* ---- 功能卡片单列 ---- */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* ---- 图片画廊适配 ---- */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Section 内边距缩小 ---- */
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* ---- 底部链接统一样式 ---- */
   .footer-links {
     text-align: left;
   }
-  
+
   .footer-links ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .footer-links li {
     margin-bottom: 0.25rem;
   }
-  
-  /* 移动端底部三列在超出时自动换行 */
+
+  /* ---- 底部三列变单列 ---- */
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  /* ---- 表单适配 ---- */
+  .form-container {
+    padding: var(--space-lg);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- 产品/故事页面文字区域 ---- */
+  .section-text, .story-text, .product-content {
+    max-width: 100%;
   }
 }
 

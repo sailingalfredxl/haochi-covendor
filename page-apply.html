@@ -256,16 +256,22 @@
                 </select>
               </div>
               <div class="form-field">
-                <label data-lang="zh">食品许可证</label>
-                <label data-lang="en">Food Permit</label>
-                <select name="permit">
+                <label data-lang="zh">自备车辆</label>
+                <label data-lang="en">Own Vehicle</label>
+                <select name="vehicle_type">
                   <option value="">-</option>
-                  <option value="none" data-lang="zh">暂无</option>
-                  <option value="none" data-lang="en">None yet</option>
-                  <option value="mobile" data-lang="zh">移动餐车许可</option>
-                  <option value="mobile" data-lang="en">Mobile Food Permit</option>
-                  <option value="commercial" data-lang="zh">商业厨房许可</option>
-                  <option value="commercial" data-lang="en">Commercial Kitchen</option>
+                  <option value="none" data-lang="zh">无车辆</option>
+                  <option value="none" data-lang="en">No vehicle</option>
+                  <option value="sedan" data-lang="zh">轿车 / SUV</option>
+                  <option value="sedan" data-lang="en">Sedan / SUV</option>
+                  <option value="van" data-lang="zh">面包车 / 货车</option>
+                  <option value="van" data-lang="en">Van / Cargo Van</option>
+                  <option value="truck" data-lang="zh">皮卡 / 大型货车</option>
+                  <option value="truck" data-lang="en">Pickup / Large Truck</option>
+                  <option value="food_truck" data-lang="zh">餐车</option>
+                  <option value="food_truck" data-lang="en">Food Truck</option>
+                  <option value="trailer" data-lang="zh">拖车 / 挂车</option>
+                  <option value="trailer" data-lang="en">Trailer</option>
                 </select>
               </div>
             </div>
@@ -615,5 +621,29 @@
 
     updateRemoveButtons();
   </script>
+
+  <!-- Mobile Bottom Tab Bar -->
+  <nav class="mobile-tab-bar" aria-label="Mobile navigation">
+    <a href="index.html" class="tab-item ">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label" data-lang="zh">首页</span>
+      <span class="tab-label" data-lang="en">Home</span>
+    </a>
+    <a href="page-story.html" class="tab-item ">
+      <span class="tab-icon">👥</span>
+      <span class="tab-label" data-lang="zh">关于我们</span>
+      <span class="tab-label" data-lang="en">About</span>
+    </a>
+    <a href="page-products.html" class="tab-item ">
+      <span class="tab-icon">🔥</span>
+      <span class="tab-label" data-lang="zh">爆款</span>
+      <span class="tab-label" data-lang="en">Products</span>
+    </a>
+    <a href="page-solution.html" class="tab-item active">
+      <span class="tab-icon">🚀</span>
+      <span class="tab-label" data-lang="zh">成为摊主</span>
+      <span class="tab-label" data-lang="en">Join</span>
+    </a>
+  </nav>
 </body>
 </html>
