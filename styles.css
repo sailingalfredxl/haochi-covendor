@@ -1381,12 +1381,13 @@ p {
   gap: 0.5rem;
   cursor: pointer;
   padding: 0.875rem 1.5rem;
-  border: 1.5px solid var(--gray-300);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
   border-radius: var(--border-radius);
   transition: var(--transition-fast);
   min-width: 80px;
   justify-content: center;
   user-select: none;
+  color: rgba(0, 0, 0, 0.7);
 }
 .yesno-label:hover {
   border-color: var(--primary);
@@ -1446,7 +1447,7 @@ p {
   justify-content: center;
   gap: 0.4rem;
   padding: 0.6rem 0.5rem;
-  border: 1.5px solid var(--gray-300);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.82rem;
@@ -1456,6 +1457,7 @@ p {
   transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
   user-select: none;
   background: var(--white);
+  color: rgba(0, 0, 0, 0.7);
 }
 .checkbox-label:hover {
   border-color: var(--primary);
@@ -1483,7 +1485,7 @@ p {
   align-items: center;
   justify-content: center;
   padding: 0.65rem 0.5rem;
-  border: 1.5px solid var(--gray-300);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.82rem;
@@ -1493,6 +1495,7 @@ p {
   transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
   user-select: none;
   background: var(--white);
+  color: rgba(0, 0, 0, 0.7);
 }
 .food-tag-label span {
   pointer-events: none;
