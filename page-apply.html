@@ -254,9 +254,9 @@
               </select>
             </div>
 
-            <!-- 问题二：独家秘方与特色美食 -->
+            <!-- 问题二：有哪些拿手绝活 -->
             <div class="form-field">
-              <label data-lang="zh">独家秘方与特色美食 <span class="required-star">*</span>（最多选5个）</label>
+              <label data-lang="zh">有哪些拿手绝活？<span class="required-star">*</span>（最多选5个）</label>
               <label data-lang="en">Your Signature Specialties <span class="required-star">*</span> (max 5)</label>
               <div class="food-tag-grid" id="foodTagGrid">
                 <label class="food-tag-label"><input type="checkbox" name="food_tags" value="麻辣香锅"><span>麻辣香锅</span></label>
@@ -289,6 +289,11 @@
                 <label class="food-tag-label"><input type="checkbox" name="food_tags" value="钵钵鸡"><span>钵钵鸡</span></label>
                 <label class="food-tag-label"><input type="checkbox" name="food_tags" value="狼牙土豆"><span>狼牙土豆</span></label>
                 <label class="food-tag-label"><input type="checkbox" name="food_tags" value="糖葫芦"><span>糖葫芦</span></label>
+                <label class="food-tag-label food-tag-other-label"><input type="checkbox" name="food_tags" value="其它" id="foodTagOther"><span>其它</span></label>
+              </div>
+              <div class="food-tag-other-input" id="foodTagOtherInput" style="display:none; margin-top: 10px;">
+                <input type="text" name="food_tags_other" placeholder="请填写您的其它绝活..." data-lang="zh" placeholder-zh="请填写您的其它绝活...">
+                <input type="text" name="food_tags_other_en" placeholder="Your other specialties..." data-lang="en" placeholder-en="Your other specialties...">
               </div>
               <p class="food-tag-hint" data-lang="zh">已选 <span id="foodTagCount">0</span>/5 个</p>
               <p class="food-tag-hint" data-lang="en">Selected: <span id="foodTagCountEn">0</span>/5</p>
@@ -604,6 +609,19 @@
         input.addEventListener('change', updateFoodTagLimit);
       });
       updateFoodTagLimit();
+    }
+
+    // ── "其它" checkbox → reveal text input ──────────────────────
+    const foodTagOtherCheckbox = document.getElementById('foodTagOther');
+    const foodTagOtherInput = document.getElementById('foodTagOtherInput');
+    if (foodTagOtherCheckbox && foodTagOtherInput) {
+      foodTagOtherCheckbox.addEventListener('change', function() {
+        foodTagOtherInput.style.display = this.checked ? 'block' : 'none';
+        if (!this.checked) {
+          // Clear text when unchecked
+          foodTagOtherInput.querySelectorAll('input').forEach(i => i.value = '');
+        }
+      });
     }
 
     // ── Reasons Selection (max 3) ───────────────────────────────
