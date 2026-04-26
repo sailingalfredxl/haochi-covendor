@@ -79,8 +79,8 @@
             </div>
             <div class="form-row">
               <div class="form-field">
-                <label data-lang="zh">姓名</label>
-                <label data-lang="en">Name</label>
+                <label data-lang="zh">姓名 <span class="required-star">*</span></label>
+                <label data-lang="en">Name <span class="required-star">*</span></label>
                 <input type="text" name="name" required placeholder="">
               </div>
               <div class="form-field">
@@ -96,14 +96,14 @@
                 <input type="tel" name="phone" placeholder="">
               </div>
               <div class="form-field">
-                <label data-lang="zh">微信</label>
-                <label data-lang="en">WeChat ID</label>
-                <input type="text" name="wechat" placeholder="">
+                <label data-lang="zh">微信号 <span class="required-star">*</span></label>
+                <label data-lang="en">WeChat ID <span class="required-star">*</span></label>
+                <input type="text" name="wechat" required placeholder="">
               </div>
             </div>
             <div class="form-field">
-              <label data-lang="zh">居住地点</label>
-              <label data-lang="en">State</label>
+              <label data-lang="zh">居住地点 <span class="required-star">*</span></label>
+              <label data-lang="en">State <span class="required-star">*</span></label>
               <select name="state">
                 <option value="">-</option>
                 <option value="AL">AL Alabama / 阿拉巴马州</option>
@@ -162,8 +162,8 @@
 
             <!-- 判断性问题 -->
             <div class="form-field yesno-field">
-              <label data-lang="zh">您是否具有美国合法工作许可？</label>
-              <label data-lang="en">Do you have legal work authorization in the U.S.?</label>
+              <label data-lang="zh">您是否具有美国合法工作许可？<span class="required-star">*</span></label>
+              <label data-lang="en">Do you have legal work authorization in the U.S.?<span class="required-star">*</span></label>
               <div class="yesno-options">
                 <label class="yesno-label">
                   <input type="radio" name="work_permit" value="yes">
@@ -179,8 +179,8 @@
             </div>
 
             <div class="form-field yesno-field">
-              <label data-lang="zh">您是否自有可用于出摊运输的车辆？</label>
-              <label data-lang="en">Do you have a vehicle for transport to events?</label>
+              <label data-lang="zh">您是否自有可用于出摊运输的车辆？<span class="required-star">*</span></label>
+              <label data-lang="en">Do you have a vehicle for transport to events?<span class="required-star">*</span></label>
               <div class="yesno-options">
                 <label class="yesno-label">
                   <input type="radio" name="own_vehicle" value="yes">
@@ -196,8 +196,8 @@
             </div>
 
             <div class="form-field checkbox-group-field">
-              <label data-lang="zh">您是否有以下移动餐饮服务资质？（可多选）</label>
-              <label data-lang="en">Do you have any of the following certifications? (select all that apply)</label>
+              <label data-lang="zh">您是否有以下移动餐饮服务资质？<span class="required-star">*</span>（可多选）</label>
+              <label data-lang="en">Do you have any of the following certifications?<span class="required-star">*</span> (select all that apply)</label>
               <div class="checkbox-grid">
                 <label class="checkbox-label">
                   <input type="checkbox" name="certifications" value="food_manager">
@@ -233,90 +233,65 @@
             </div>
           </div>
 
-          <!-- Section 2: 硬件配置 -->
+          <!-- Section 2: 你的独家绝活（合并技能点 + 绝活） -->
           <div class="form-group animate-on-scroll">
             <div class="form-group-title">
-              <h4 data-lang="zh">⚙️ 硬件配置 (Your Setup)</h4>
-              <h4 data-lang="en">⚙️ Your Setup</h4>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label data-lang="zh">自有设备</label>
-                <label data-lang="en">Equipment</label>
-                <select name="equipment">
-                  <option value="">-</option>
-                  <option value="none" data-lang="zh">无</option>
-                  <option value="none" data-lang="en">None</option>
-                  <option value="basic" data-lang="zh">基础设备</option>
-                  <option value="basic" data-lang="en">Basic Setup</option>
-                  <option value="full" data-lang="zh">全套设备</option>
-                  <option value="full" data-lang="en">Full Setup</option>
-                  <option value="truck" data-lang="zh">餐车</option>
-                  <option value="truck" data-lang="en">Food Truck</option>
-                </select>
-              </div>
-              <div class="form-field">
-                <label data-lang="zh">自备车辆</label>
-                <label data-lang="en">Own Vehicle</label>
-                <select name="vehicle_type">
-                  <option value="">-</option>
-                  <option value="none" data-lang="zh">无车辆</option>
-                  <option value="none" data-lang="en">No vehicle</option>
-                  <option value="sedan" data-lang="zh">轿车 / SUV</option>
-                  <option value="sedan" data-lang="en">Sedan / SUV</option>
-                  <option value="van" data-lang="zh">面包车 / 货车</option>
-                  <option value="van" data-lang="en">Van / Cargo Van</option>
-                  <option value="truck" data-lang="zh">皮卡 / 大型货车</option>
-                  <option value="truck" data-lang="en">Pickup / Large Truck</option>
-                  <option value="food_truck" data-lang="zh">餐车</option>
-                  <option value="food_truck" data-lang="en">Food Truck</option>
-                  <option value="trailer" data-lang="zh">拖车 / 挂车</option>
-                  <option value="trailer" data-lang="en">Trailer</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 3: 技能点 -->
-          <div class="form-group animate-on-scroll">
-            <div class="form-group-title">
-              <h4 data-lang="zh">👨‍🍳 技能点 (Your Skills)</h4>
-              <h4 data-lang="en">👨‍🍳 Your Skills</h4>
-            </div>
-            <div class="form-row">
-              <div class="form-field">
-                <label data-lang="zh">烹饪经验</label>
-                <label data-lang="en">Cooking Experience</label>
-                <select name="experience">
-                  <option value="">-</option>
-                  <option value="home" data-lang="zh">家常烹饪</option>
-                  <option value="home" data-lang="en">Home Cooking</option>
-                  <option value="restaurant" data-lang="zh">餐厅厨师</option>
-                  <option value="restaurant" data-lang="en">Restaurant Chef</option>
-                  <option value="professional" data-lang="zh">专业厨师</option>
-                  <option value="professional" data-lang="en">Professional Chef</option>
-                  <option value="catering" data-lang="zh">外烩/活动餐</option>
-                  <option value="catering" data-lang="en">Catering/Events</option>
-                </select>
-              </div>
-              <div class="form-field">
-                <label data-lang="zh">招牌菜/代表作</label>
-                <label data-lang="en">Signature Dish</label>
-                <input type="text" name="signature" placeholder="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 4: 你的绝活 -->
-          <div class="form-group animate-on-scroll">
-            <div class="form-group-title">
-              <h4 data-lang="zh">🌶️ 你的绝活 (Your Secret Sauce)</h4>
+              <h4 data-lang="zh">🌶️ 你的独家绝活 (Your Secret Sauce)</h4>
               <h4 data-lang="en">🌶️ Your Secret Sauce</h4>
             </div>
+
+            <!-- 问题一：烹饪经验 -->
             <div class="form-field">
-              <label data-lang="zh">美食特色/卖点</label>
-              <label data-lang="en">What makes your food unique?</label>
-              <textarea name="specialty" placeholder=""></textarea>
+              <label data-lang="zh">您是否有烹饪经验？</label>
+              <label data-lang="en">What's your cooking experience?</label>
+              <select name="experience">
+                <option value="">-</option>
+                <option value="home">家常烹饪</option>
+                <option value="restaurant">餐厅厨师</option>
+                <option value="professional">专业大厨</option>
+                <option value="catering">外烩/团餐</option>
+                <option value="none">暂无经验</option>
+              </select>
+            </div>
+
+            <!-- 问题二：独家秘方与特色美食 -->
+            <div class="form-field">
+              <label data-lang="zh">独家秘方与特色美食 <span class="required-star">*</span>（最多选5个）</label>
+              <label data-lang="en">Your Signature Specialties <span class="required-star">*</span> (max 5)</label>
+              <div class="food-tag-grid" id="foodTagGrid">
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="麻辣香锅"><span>麻辣香锅</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="北京烤鸭"><span>北京烤鸭</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="小笼包"><span>小笼包</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="兰州拉面"><span>兰州拉面</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="重庆小面"><span>重庆小面</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="煎饼果子"><span>煎饼果子</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="肉夹馍"><span>肉夹馍</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="凉皮"><span>凉皮</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="烤冷面"><span>烤冷面</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="串串香"><span>串串香</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="麻辣烫"><span>麻辣烫</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="手抓饼"><span>手抓饼</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="鸡蛋灌饼"><span>鸡蛋灌饼</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="章鱼小丸子"><span>章鱼小丸子</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="可丽饼"><span>可丽饼</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="锅盔"><span>锅盔</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="灌汤包"><span>灌汤包</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="生煎包"><span>生煎包</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="肠粉"><span>肠粉</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="虾饺"><span>虾饺</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="烧麦"><span>烧麦</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="蛋挞"><span>蛋挞</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="珍珠奶茶"><span>珍珠奶茶</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="芋泥波波"><span>芋泥波波</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="杨枝甘露"><span>杨枝甘露</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="冰粉"><span>冰粉</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="红糖糍粑"><span>红糖糍粑</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="钵钵鸡"><span>钵钵鸡</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="狼牙土豆"><span>狼牙土豆</span></label>
+                <label class="food-tag-label"><input type="checkbox" name="food_tags" value="糖葫芦"><span>糖葫芦</span></label>
+              </div>
+              <p class="food-tag-hint" data-lang="zh">已选 <span id="foodTagCount">0</span>/5 个</p>
+              <p class="food-tag-hint" data-lang="en">Selected: <span id="foodTagCountEn">0</span>/5</p>
             </div>
           </div>
 
@@ -326,45 +301,67 @@
               <h4 data-lang="zh">💰 搞钱意向 (Your Hustle Goals)</h4>
               <h4 data-lang="en">💰 Your Hustle Goals</h4>
             </div>
-            <div class="form-field">
-              <label data-lang="zh">为什么想要成为合作摊主？</label>
-              <label data-lang="en">Why do you want to become a co-vendor?</label>
-              <textarea name="reason" class="reason-textarea" data-placeholder="展示非凡厨艺 / 丰富闲暇生活 / 提升副业收入 / 改善家庭收入" placeholder=""></textarea>
+            <div class="form-field checkbox-group-field">
+              <label data-lang="zh">为什么想要成为合作摊主？<span class="required-star">*</span>（最多选3个）</label>
+              <label data-lang="en">Why do you want to become a co-vendor?<span class="required-star">*</span> (max 3)</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="提升副业收入"><span data-lang="zh">提升副业收入</span><span data-lang="en">Boost side income</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="展示烹饪才华"><span data-lang="zh">展示烹饪才华</span><span data-lang="en">Show off cooking skills</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="丰富业余生活"><span data-lang="zh">丰富业余生活</span><span data-lang="en">Enrich free time</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="结识有趣的人"><span data-lang="zh">结识有趣的人</span><span data-lang="en">Meet interesting people</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="改善家庭收入"><span data-lang="zh">改善家庭收入</span><span data-lang="en">Improve family income</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="探索创业可能"><span data-lang="zh">探索创业可能</span><span data-lang="en">Explore entrepreneurship</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="热爱街头美食"><span data-lang="zh">热爱街头美食</span><span data-lang="en">Love street food culture</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="打发无聊时间"><span data-lang="zh">打发无聊时间</span><span data-lang="en">Beat boredom</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="需要灵活时间"><span data-lang="zh">需要灵活时间</span><span data-lang="en">Need flexible hours</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="品牌合作机会"><span data-lang="zh">品牌合作机会</span><span data-lang="en">Brand partnership chance</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="验证菜品市场"><span data-lang="zh">验证菜品市场</span><span data-lang="en">Test food in market</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="reasons" value="享受摆摊乐趣"><span data-lang="zh">享受摆摊乐趣</span><span data-lang="en">Enjoy the hustle vibe</span></label>
+              </div>
             </div>
           </div>
 
-          <!-- Section 6: 情报收集 -->
+          <!-- Section 6: 出摊方式 -->
           <div class="form-group animate-on-scroll">
             <div class="form-group-title">
-              <h4 data-lang="zh">🕵️ 情报收集 (Event Intel)</h4>
-              <h4 data-lang="en">🕵️ Event Intel</h4>
+              <h4 data-lang="zh">📅 出摊方式 (Your Availability)</h4>
+              <h4 data-lang="en">📅 Your Availability</h4>
             </div>
-            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--space-lg);" data-lang="zh">知道什么好活动？爆料有赏！活动情报 = 加分项！</p>
-            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: var(--space-lg);" data-lang="en">Know any good festivals? Spill the tea! Info on events = bonus points!</p>
 
-            <div id="eventIntelContainer">
-              <div class="event-intel-item">
-                <div class="form-field">
-                  <label data-lang="zh">活动名称</label>
-                  <label data-lang="en">Event Name</label>
-                  <input type="text" name="event_name[]" placeholder="">
-                </div>
-                <div class="form-field">
-                  <label data-lang="zh">活动地点</label>
-                  <label data-lang="en">Location</label>
-                  <input type="text" name="event_location[]" placeholder="">
-                </div>
-                <div class="form-field">
-                  <label>&nbsp;</label>
-                  <button type="button" class="remove-event-btn" onclick="removeEventIntel(this)" style="display: none;">✕</button>
-                </div>
+            <!-- 问题一：哪些时间可以出摊 -->
+            <div class="form-field checkbox-group-field">
+              <label data-lang="zh">哪些时间可以出摊？（可多选）</label>
+              <label data-lang="en">When are you available to vend? (select all that apply)</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="weekday_morning"><span data-lang="zh">工作日白天</span><span data-lang="en">Weekday mornings</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="weekday_evening"><span data-lang="zh">工作日晚上</span><span data-lang="en">Weekday evenings</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="weekend_morning"><span data-lang="zh">周末白天</span><span data-lang="en">Weekend mornings</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="weekend_evening"><span data-lang="zh">周末晚上</span><span data-lang="en">Weekend evenings</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="summer_vacation"><span data-lang="zh">暑假期间</span><span data-lang="en">Summer vacation</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="winter_vacation"><span data-lang="zh">寒假期间</span><span data-lang="en">Winter vacation</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="holiday_weekend"><span data-lang="zh">节日/假日</span><span data-lang="en">Holidays & long weekends</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="availability" value="anytime"><span data-lang="zh">时间灵活随叫随到</span><span data-lang="en">Flexible / anytime</span></label>
               </div>
             </div>
 
-            <button type="button" class="add-event-btn" onclick="addEventIntel()">
-              <span data-lang="zh">+ 还有料？继续爆</span>
-              <span data-lang="en">+ Add More Events</span>
-            </button>
+            <!-- 问题二：人手够吗 -->
+            <div class="form-field">
+              <label data-lang="zh">人手够吗？</label>
+              <label data-lang="en">How many people can you bring?</label>
+              <select name="team_size">
+                <option value="">-</option>
+                <option value="couple" data-lang="zh">我和太太/女朋友两人</option>
+                <option value="couple" data-lang="en">Me + partner (girlfriend/wife)</option>
+                <option value="family" data-lang="zh">可以全家出动</option>
+                <option value="family" data-lang="en">Can bring whole family</option>
+                <option value="friends" data-lang="zh">我和我的朋友</option>
+                <option value="friends" data-lang="en">Me + my friends</option>
+                <option value="solo" data-lang="zh">我一个人</option>
+                <option value="solo" data-lang="en">Just me solo</option>
+                <option value="hired" data-lang="zh">需要至少雇佣1名员工</option>
+                <option value="hired" data-lang="en">Need to hire at least 1 employee</option>
+              </select>
+            </div>
           </div>
 
           <!-- Section 7: 其他 -->
@@ -479,7 +476,6 @@
         langToggle.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         localStorage.setItem('hcc_lang', lang);
-        setReasonPlaceholder(lang);
       });
     });
 
@@ -510,43 +506,6 @@
       }
     }
     setReasonPlaceholder(html.lang);
-
-    // Event Intel Dynamic Fields
-    function addEventIntel() {
-      const container = document.getElementById('eventIntelContainer');
-      const newItem = document.createElement('div');
-      newItem.className = 'event-intel-item';
-      newItem.innerHTML = `
-        <div class="form-field">
-          <label data-lang="zh">活动名称</label>
-          <label data-lang="en">Event Name</label>
-          <input type="text" name="event_name[]" placeholder="">
-        </div>
-        <div class="form-field">
-          <label data-lang="zh">活动地点</label>
-          <label data-lang="en">Location</label>
-          <input type="text" name="event_location[]" placeholder="">
-        </div>
-        <div class="form-field">
-          <label>&nbsp;</label>
-          <button type="button" class="remove-event-btn" onclick="removeEventIntel(this)">✕</button>
-        </div>
-      `;
-      container.appendChild(newItem);
-      updateRemoveButtons();
-    }
-
-    function removeEventIntel(btn) {
-      btn.closest('.event-intel-item').remove();
-      updateRemoveButtons();
-    }
-
-    function updateRemoveButtons() {
-      const items = document.querySelectorAll('.event-intel-item');
-      document.querySelectorAll('.remove-event-btn').forEach(btn => {
-        btn.style.display = items.length > 1 ? 'block' : 'none';
-      });
-    }
 
     // Form Submission - Netlify Forms compatible
     document.getElementById('applicationForm').addEventListener('submit', function(e) {
@@ -619,7 +578,47 @@
       observer.observe(el);
     });
 
-    updateRemoveButtons();
+    // ── Food Tag Selection (max 5) ────────────────────────────────
+    const foodTagGrid = document.getElementById('foodTagGrid');
+    const foodTagCountEl = document.getElementById('foodTagCount');
+    const foodTagCountEnEl = document.getElementById('foodTagCountEn');
+
+    function updateFoodTagLimit() {
+      const checked = foodTagGrid.querySelectorAll('input:checked');
+      const count = checked.length;
+      if (foodTagCountEl) foodTagCountEl.textContent = count;
+      if (foodTagCountEnEl) foodTagCountEnEl.textContent = count;
+
+      foodTagGrid.querySelectorAll('.food-tag-label').forEach(label => {
+        const input = label.querySelector('input');
+        if (!input.checked && count >= 5) {
+          label.classList.add('disabled');
+        } else {
+          label.classList.remove('disabled');
+        }
+      });
+    }
+
+    if (foodTagGrid) {
+      foodTagGrid.querySelectorAll('input[type="checkbox"]').forEach(input => {
+        input.addEventListener('change', updateFoodTagLimit);
+      });
+      updateFoodTagLimit();
+    }
+
+    // ── Reasons Selection (max 3) ───────────────────────────────
+    document.querySelectorAll('input[name="reasons"]').forEach(input => {
+      input.addEventListener('change', function() {
+        const checked = document.querySelectorAll('input[name="reasons"]:checked');
+        if (checked.length > 3) {
+          this.checked = false;
+        }
+      });
+    });
+
+    // ── Availability Selection (no limit, informational) ──────────
+    // Keep as-is — no max limit for availability
+
   </script>
 
   <!-- Mobile Bottom Tab Bar -->
