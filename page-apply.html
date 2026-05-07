@@ -229,6 +229,11 @@
                   <span data-lang="zh">防窒息证书</span>
                   <span data-lang="en">Choking Prevention Cert</span>
                 </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="certifications" value="none" class="cert-none">
+                  <span data-lang="zh">以上都没有</span>
+                  <span data-lang="en">None of the above</span>
+                </label>
               </div>
             </div>
           </div>
@@ -623,6 +628,34 @@
         }
       });
     }
+
+    // ── Certifications Selection (mutual exclusion with "none") ─────
+    const certNoneCheckbox = document.querySelector('.cert-none');
+    const certCheckboxes = document.querySelectorAll('input[name="certifications"]:not(.cert-none)');
+    
+    if (certNoneCheckbox) {
+      certNoneCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+          certCheckboxes.forEach(cb => {
+            cb.checked = false;
+            cb.disabled = true;
+          });
+        } else {
+          certCheckboxes.forEach(cb => {
+            cb.disabled = false;
+          });
+        }
+      });
+    }
+    
+    certCheckboxes.forEach(cb => {
+      cb.addEventListener('change', function() {
+        if (this.checked && certNoneCheckbox) {
+          certNoneCheckbox.checked = false;
+          certNoneCheckbox.disabled = false;
+        }
+      });
+    });
 
     // ── Reasons Selection (max 3) ───────────────────────────────
     document.querySelectorAll('input[name="reasons"]').forEach(input => {
